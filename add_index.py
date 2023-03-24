@@ -48,13 +48,13 @@ for filename in list_files:
                 break
                 
         if flag:
-            # pass
+            pass
             #count_added_lines += 1
-            #line_list.append(line)
+            line_list.append(line)
 
-            doc = {'text': line}
-            es.index(index="wiki2", doc_type="1", id=id, body=doc)
-            id += 1
+            # doc = {'text': line}
+            # es.index(index="wiki2", doc_type="1", id=id, body=doc)
+            # id += 1
 
 end = time.time()
 print(end - start) 

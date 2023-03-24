@@ -1,0 +1,8 @@
+➜  elasticsearch /bin/python3 /home/dima/elasticsearch/bulk.py
+len(conll_words_set) = 2637
+/home/dima/.local/lib/python3.10/site-packages/elasticsearch7/connection/base.py:200: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security.
+  warnings.warn(message, category=ElasticsearchWarning)
+count_added_lines = 557122
+len(actions)  = 557122
+1383.2723362445831
+1434.834537744522
