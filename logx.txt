@@ -1,8 +1,44 @@
-➜  elasticsearch /bin/python3 /home/dima/elasticsearch/bulk.py
 len(conll_words_set) = 2637
 /home/dima/.local/lib/python3.10/site-packages/elasticsearch7/connection/base.py:200: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security.
   warnings.warn(message, category=ElasticsearchWarning)
-count_added_lines = 557122
-len(actions)  = 557122
-1383.2723362445831
-1434.834537744522
+count_files = 100, time = 395.98075795173645 count_added_lines = 310952
+count_files = 200, time = 847.2132580280304 count_added_lines = 458128
+count_files = 300, time = 1328.6322326660156 count_added_lines = 555018
+count_files = 400, time = 1789.650601387024 count_added_lines = 620469
+count_files = 500, time = 2249.1304864883423 count_added_lines = 670414
+count_files = 600, time = 2662.3275051116943 count_added_lines = 711598
+count_files = 700, time = 3105.556101322174 count_added_lines = 747226
+count_files = 800, time = 3552.75750541687 count_added_lines = 777532
+count_files = 900, time = 3984.8700466156006 count_added_lines = 803236
+count_files = 1000, time = 4406.119448661804 count_added_lines = 824810
+count_files = 1100, time = 4825.822277069092 count_added_lines = 845130
+count_files = 1200, time = 5243.4421327114105 count_added_lines = 862696
+count_files = 1300, time = 5651.984599351883 count_added_lines = 877474
+count_files = 1400, time = 6054.574385643005 count_added_lines = 891496
+count_files = 1500, time = 6452.286266326904 count_added_lines = 904920
+count_files = 1600, time = 6858.357303380966 count_added_lines = 917398
+count_files = 1700, time = 7225.757285118103 count_added_lines = 928071
+count_files = 1800, time = 7619.534769773483 count_added_lines = 938953
+count_files = 1900, time = 8014.100708723068 count_added_lines = 948796
+count_files = 2000, time = 8389.566770553589 count_added_lines = 958184
+count_files = 2100, time = 8790.218081474304 count_added_lines = 967732
+count_files = 2200, time = 9176.630071163177 count_added_lines = 976327
+count_files = 2300, time = 9565.500425815582 count_added_lines = 984547
+count_files = 2400, time = 9948.311071395874 count_added_lines = 991566
+count_files = 2500, time = 10329.333597660065 count_added_lines = 998640
+count_files = 2600, time = 10705.466991186142 count_added_lines = 1005767
+count_files = 2700, time = 11081.56702208519 count_added_lines = 1012219
+count_files = 2800, time = 11456.852162361145 count_added_lines = 1018670
+count_files = 2900, time = 11830.607922315598 count_added_lines = 1024640
+count_files = 3000, time = 12191.99091553688 count_added_lines = 1030511
+count_files = 3100, time = 12554.245846271515 count_added_lines = 1035830
+count_files = 3200, time = 12913.696414709091 count_added_lines = 1040618
+count_files = 3300, time = 13272.664989709854 count_added_lines = 1045519
+count_files = 3400, time = 13647.63106584549 count_added_lines = 1050350
+count_files = 3500, time = 14005.715525388718 count_added_lines = 1054890
+count_files = 3600, time = 14365.623924016953 count_added_lines = 1059276
+count_files = 3700, time = 14742.960505723953 count_added_lines = 1063758
+count_added_lines = 1063933
+len(actions)  = 1063933
+14759.401137113571
+15017.957792043686

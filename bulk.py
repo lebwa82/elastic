@@ -14,7 +14,7 @@ dict_conll_words = dict()
 for word in conll_words_set:
     dict_conll_words[word] = 0
 
-es.indices.delete(index="bulk1")
+
 es.indices.create(index="bulk1")
 
 # file = open('data.xml-0001.txt', 'r')
@@ -29,9 +29,8 @@ actions = []
 for filename in list_files:
     file = open(f'{path_dir}/{filename}', 'r')
     count_files += 1
-    # if count_files%100 == 0:
-    #print(
-    #    f'count_files = {count_files}, time = {time.time() - start} count_added_lines = {count_added_lines}')
+    if count_files%100 == 0:
+        print(f'count_files = {count_files}, time = {time.time() - start} count_added_lines = {count_added_lines}')
     while True:
         line = file.readline()
         if not line:
@@ -69,8 +68,8 @@ for filename in list_files:
 
             # es.index(index="wiki2", doc_type="1", id=id, body=doc)
             id += 1
-    if count_files > 300:
-        break
+    # if count_files > 300:
+    #     break
 
 # for i in actions:
 #     print(i)
