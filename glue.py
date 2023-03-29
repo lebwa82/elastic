@@ -7,6 +7,7 @@ import re
 glue_text = open('glue_text.txt', 'w')
 start = time.time()
 
+
 N_results = 5
 def elastic_more_like_this(sentence):
     res  = ""
@@ -31,18 +32,33 @@ def elastic_more_like_this(sentence):
     return res
 
 
-file = open("spanner.test")
-conll = json.load(file)
+input_file = open("spanner.test")
+
+
+res_list = []
+conll = json.load(input_file)
 count_sentence = 0
 for sentence in conll:
     count_sentence += 1
     if count_sentence %100 == 0:
         print(f'count_sentence = {count_sentence} time = {time.time() - start}')
+    # if count_sentence > 500:
+    #     break
+
     span_posLabel = sentence['span_posLabel']
     context = sentence['context']
+    
     res1  = context + elastic_more_like_this(context)
     #отделить знаки препинания от текста
     #res2 = re.sub(r'[]!"$%&\'()*+,./:;=#@?[\\^_`{|}~-]+', r' \g<0> ', res1).strip()
     #print(f'context = {context}\n res = {res2}\n')
+    dict_sentence = {'context': res1, 'span_posLabel': span_posLabel}
+    res_list.append(dict_sentence)
     glue_text.write(f'{res1}\n')
     #input()
+
+
+with open('spanner_new.json', 'w') as fp:
+        # Преобразование объектов Python в данные 
+        # JSON формата, а так же запись в файл 'data.json'
+        json.dump(res_list, fp)
