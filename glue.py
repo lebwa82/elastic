@@ -47,18 +47,30 @@ for sentence in conll:
 
     span_posLabel = sentence['span_posLabel']
     context = sentence['context']
-    
+    max_number = 900
     res1  = context + elastic_more_like_this(context)
-    #отделить знаки препинания от текста
-    #res2 = re.sub(r'[]!"$%&\'()*+,./:;=#@?[\\^_`{|}~-]+', r' \g<0> ', res1).strip()
-    #print(f'context = {context}\n res = {res2}\n')
+    res2 = res1.split(' ')
+    if len(res2) > max_number:
+        diff = len(res2) - max_number
+        for ii in range(diff):
+             res2.pop()
+    
+    if len(res2) > max_number:
+         print('error')
+         input()
+    res2 = list(filter(None, res2))
+    # print(res2)
+    # input()
+
+    res1 = (' '.join(res2))
+    
     dict_sentence = {'context': res1, 'span_posLabel': span_posLabel}
     res_list.append(dict_sentence)
     glue_text.write(f'{res1}\n')
     #input()
 
 
-with open('spanner_new.json', 'w') as fp:
+with open('spanner_new_new.json', 'w') as fp:
         # Преобразование объектов Python в данные 
         # JSON формата, а так же запись в файл 'data.json'
         json.dump(res_list, fp)
