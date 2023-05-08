@@ -14,8 +14,9 @@ dict_conll_words = dict()
 for word in conll_words_set:
     dict_conll_words[word] = 0
 
-
-es.indices.create(index="bulk1")
+name_index= 'bulk1'
+es.indices.create(index=name_index)
+dict_sentense_conll_ner_wiki_paragraph = {}
 
 # file = open('data.xml-0001.txt', 'r')
 list_files = os.listdir('/home/dima/wiki/text/text')
@@ -55,7 +56,7 @@ for filename in list_files:
             # line_list.append(line)
             actions.append(
                 {
-                    "_index": "bulk1",
+                    "_index": name_index,
                     #"_type": "1",
                     "_id": id,
                     "_source": {
