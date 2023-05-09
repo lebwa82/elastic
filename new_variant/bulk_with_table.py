@@ -25,6 +25,7 @@ dict_id_wiki_paragraph = {}
 list_files = os.listdir('/home/dima/wiki/text/text')
 path_dir = '/home/dima/wiki/text/text'
 count_added_lines = 0
+count_all_lines_all_files = 0
 
 count_files = 0
 line_list = []
@@ -39,10 +40,14 @@ for filename in list_files:
     count_files += 1
     # if count_files > 2:
     #     break
+   
     if count_files%10 == 0:
         print(f'count_files = {count_files}, time = {time.time() - start} count_added_lines = {count_added_lines}')
+    
+
     while True:
         count_all_lines_in_file += 1
+        count_all_lines_all_files += 1
         try:
             line = file.readline()
         except Exception:
@@ -53,6 +58,7 @@ for filename in list_files:
             break
         if not line[0].isalpha():
             continue
+        
 
         flag = False
         word_in_line = None
@@ -101,23 +107,23 @@ for filename in list_files:
 #     input()
 
 
-with open('dict_conll.pkl', 'wb') as file:
-    pickle.dump(dict_conll, file)
+# with open('dict_conll.pkl', 'wb') as file:
+#     pickle.dump(dict_conll, file)
 
-with open('wiki_lines_dict.pkl', 'wb') as file:
-    pickle.dump(wiki_lines_dict, file)
-
-
+# with open('wiki_lines_dict.pkl', 'wb') as file:
+#     pickle.dump(wiki_lines_dict, file)
 
 
-print(f'count_added_lines = {count_added_lines}')
-print(f'len(actions)  = {len(actions)}')
-# input()
-end = time.time()
-print(end - start)
-#helpers.bulk(es, actions)
-end = time.time()
-print(end - start)
+
+
+# print(f'count_added_lines = {count_added_lines}')
+# print(f'len(actions)  = {len(actions)}')
+# # input()
+# end = time.time()
+# print(end - start)
+# #helpers.bulk(es, actions)
+# end = time.time()
+# print(end - start)
 
 
 # i = 1
